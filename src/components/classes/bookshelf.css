@@ -1,0 +1,110 @@
+.bookshelf {
+  padding: 0;
+  margin: 0;
+  list-style-type: none;
+}
+
+.bookshelf > li {
+  width: 100%;
+  margin: 90px 0 0 0;
+  display: inline-flex;
+  align-items: center;
+  background-image: linear-gradient(45deg, #101010, #404040);
+}
+
+.bookshelf > .clipped0 {
+  clip-path: polygon(0% 0%, 100% 0%, 98% 100%, 2% 100%);
+}
+
+.bookshelf > .clipped1 {
+  clip-path: polygon(2% 0%, 100% 0%, 98% 100%, 0% 100%);
+}
+
+.bookshelf > .clipped2 {
+  clip-path: polygon(2% 0%, 98% 0%, 100% 100%, 0% 100%);
+}
+
+.bookshelf > .clipped3 {
+  clip-path: polygon(0% 0%, 98% 0%, 100% 100%, 2% 100%);
+}
+
+.bookshelf > li > div.content {
+  padding: 50px 40px;
+  flex: 1 1 auto;
+}
+
+.bookshelf > li > div.content > p.price {
+  margin: 0 0 10px 0;
+  font-weight: 700;
+  font-size: 28px;
+  color: #25c0a0;
+}
+
+.bookshelf > li > div.content > p.price::first-letter {
+  font-size: 18px;
+}
+
+.bookshelf > li > div.content > div.title {
+  margin: 0 0 20px 0;
+}
+
+.bookshelf > li > div.content > div.title > span {
+  margin-right: 20px;
+  cursor: pointer;
+  font-weight: 900;
+  font-size: 28px;
+  line-height: 34px;
+  color: #fff;
+}
+
+.bookshelf > li > div.content > div.title > span:active {
+  opacity: 0.8;
+}
+
+.bookshelf > li > div.content > div.title > span:hover {
+  text-decoration: underline;
+}
+
+.bookshelf > li > div.content > div.title > button {
+  padding: 6px 0 14px 0;
+  opacity: 0;
+  background-color: transparent;
+  transition: opacity 120ms ease-in 0s;
+}
+
+.bookshelf > li:hover > div.content > div.title > button {
+  opacity: 1;
+}
+
+.bookshelf > li > div.content > div.title > button > svg {
+  width: 24px;
+  fill: #25c0a0;
+}
+
+.bookshelf > li > div.content > div.title > button:hover > svg {
+  fill: #c02020;
+}
+
+.bookshelf > li > div.content > .description {
+  margin: 0 0 10px 0;
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 24px;
+  color: #d0d0d0;
+}
+
+.bookshelf > li > div.content > .category {
+  font-weight: 800;
+  font-size: 14px;
+  color: #fff;
+}
+
+.bookshelf > li > img {
+  padding: 20px 40px;
+}
+
+@media only screen and (max-width: 800px) {
+  .bookshelf > li > img {
+    display: none;
+  }
+}
